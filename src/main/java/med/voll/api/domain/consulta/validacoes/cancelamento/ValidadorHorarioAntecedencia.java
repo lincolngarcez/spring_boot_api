@@ -5,6 +5,7 @@ import med.voll.api.domain.consulta.ConsultaRepository;
 import med.voll.api.domain.consulta.DadosCancelamentoConsulta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
 import java.time.Duration;
 import java.time.LocalDateTime;
 

@@ -13,14 +13,15 @@ public class ValidadorMedicoAtivo implements ValidadorAgendamentoDeConsulta {
     private MedicoRepository repository;
 
     public void validar(DadosAgendamentoConsulta dados) {
+        //escolha do medico opcional
         if (dados.idMedico() == null) {
             return;
         }
 
-        boolean medicoEstaAtivo = repository.findAtivoById(dados.idMedico());
-
+        var medicoEstaAtivo = repository.findAtivoById(dados.idMedico());
         if (!medicoEstaAtivo) {
             throw new ValidacaoException("Consulta não pode ser agendada com médico excluído");
         }
     }
+
 }
